@@ -8,9 +8,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  @ViewChild('logoAndName') logo!: ElementRef;
+  @ViewChild('logoAndName') logoElement!: ElementRef;
+  @ViewChild('header', { static: true }) headerElement!: ElementRef;
   ngAfterViewInit() {
-    document.documentElement.style.setProperty('--logoWidth', (this.logo.nativeElement.offsetWidth + 30) + 'px');
+    this.headerElement.nativeElement.style.setProperty('--logoWidth', (this.logoElement.nativeElement.offsetWidth + 30) + 'px');
   }
-
 }

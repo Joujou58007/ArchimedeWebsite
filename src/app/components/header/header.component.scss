@@ -25,6 +25,8 @@ header {
     height: 85%;
     aspect-ratio: 1;
     margin-right: 15px;
+    background-position: center;
+    background-size: cover;
   }
   
   .site-name {
@@ -37,6 +39,7 @@ header {
 
   .header-right {
     z-index: 1;
+    // height: 75%;
   }
   
   .header-right ul {
@@ -90,7 +93,7 @@ header {
     top: 0;
     left: 0;
     left: var(--logoWidth);
-    width: calc(100% - var(--logoWidth));
+    width: calc(100% - var(--logoWidth) - 2 * 20px);
     height: $headerHeight;
     padding: 10px 20px;
     background: linear-gradient(
