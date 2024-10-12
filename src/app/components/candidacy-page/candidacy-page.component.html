@@ -1,1 +1,39 @@
-<p>candidacy-page works!</p>
+<div class="candidacy-container">
+  <div class="candidacy-text">
+    <p>Rejoint notre société technique!</p>
+    <p>Entrez vos informations pour que nous puissons travailler ensemble</p>
+  </div>
+
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nom</mat-label>
+      <input matInput formControlName="name"/>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Nom de famille</mat-label>
+      <input matInput formControlName="familyName"/>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Email de Poly</mat-label>
+      <input matInput formControlName="email" required />
+      <mat-error *ngIf="registrationForm.get('email')?.hasError('required')">L'email est requis</mat-error>
+      <mat-error *ngIf="registrationForm.get('email')?.hasError('email')">Email invalide</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Génie</mat-label>
+      <mat-select formControlName="program" required>
+        <mat-option *ngFor="let program of programs" [value]="program">
+          {{ program }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="registrationForm.get('program')?.hasError('required')">Le génie est requis</mat-error>
+    </mat-form-field>
+      
+    <button mat-raised-button color="primary" type="submit" class="mat-elevation-z4">
+      Soumettre
+    </button>
+  </form>
+</div>
