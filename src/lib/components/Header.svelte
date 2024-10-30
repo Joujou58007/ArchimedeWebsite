@@ -16,7 +16,7 @@
 
 </script>
 
-<svelte:window on:wheel={handleMouseScroll} />
+<svelte:window on:scroll={handleMouseScroll} />
 
 <header>
 	<a href="/" class="header-left">
