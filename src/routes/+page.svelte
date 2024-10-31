@@ -25,8 +25,13 @@
     </div>
     <div class="presentation-container">
         <div class="initial-presentation">
-            <h2>Présentation</h2>
-            <p>Archimède est une société technique de Polytechnique Montréal qui se spécialise dans la conception de sous-marins à propution humaine afin de compétitonner dans des compétitions internatinales.</p>
+            <div class="left-presentation">
+                <h2>Présentation</h2>
+                <p>Archimède est une société technique de Polytechnique Montréal qui se spécialise dans la conception de sous-marins à propution humaine afin de compétitonner dans des compétitions internatinales.</p>
+            </div>
+            <div class="right-presentation">
+                <img src="/images/presentation-image.JPG" alt="Équipe qui se prepare pour le sous marin">
+            </div>
         </div>
         
         <p>a</p>
@@ -86,24 +91,38 @@
 	}
 
     :root {
-        --firstImageHeight: 540px
+        --firstImageHeight: 540px;
+        --presentation-image-width: 400px;
+        --presentation-right-gap: 200px
     }
     .main-container {
         width: 100vw;
     }
 
     .initial-presentation {
+        margin-right: auto;
+        margin-left: auto;
+
         margin-top: 80px;
-        margin-left: 300px;
-        margin-right: 300px;
+        /* margin-left: 300px; */
+        /* margin-right: var(--presentation-right-gap); */
+        width: 1200px;
         font-family: 'raleway';
-        width: calc(100vw - 2 * 300px);
+        /* width: calc(100vw  - 300px - var(--presentation-right-gap)); */
+        display: flex;
+    }
+    .left-presentation {
+        width: calc(100% - var(--firstImageHeight));
+        display: flex;
+        flex-direction: column;
     }
 
-    .initial-presentation p {
+    .left-presentation p {
         /* color: blue; */
         font-size: 18px;
         text-wrap: wrap;
+        margin-right: auto;
+        margin-bottom: auto;
     }
 
     .initial-presentation h2 {
@@ -111,6 +130,13 @@
         font-weight: 500;
         font-size: 40px;
         text-wrap: wrap;
+        margin-top: auto;
+    }
+
+    .right-presentation img {
+        border-radius: 50%;
+        height: var(--presentation-image-width);
+        aspect-ratio: 1;
     }
 
 
