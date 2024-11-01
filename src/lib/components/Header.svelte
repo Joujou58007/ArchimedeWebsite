@@ -1,17 +1,18 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
-
+	import { onMount } from "svelte";
 
 	function goToHomePage() {
 		goto('/');
 	}
 
-	function handleMouseScroll() {
+    onMount(() => {handleMouseScroll()});
+
+	function handleMouseScroll() {        
 		document.body.style.setProperty(
 			'--headerHeightModifier',
-			(window.scrollY / (document.body.offsetHeight - window.innerHeight)).toString()
+			(window.scrollY / (document.body.offsetHeight - window.innerHeight + 0.00001)).toString()
 		);
-		// console.log(window.scrollY / (document.body.offsetHeight - window.innerHeight))
 	}
 
 </script>
