@@ -2,6 +2,14 @@
 	import { goto } from "$app/navigation";
 	import { onMount } from "svelte";
 
+	import { locale } from '$lib/i18n';
+  	import { saveLocale } from '$lib/i18n';
+
+  	function switchLanguage(lang: string): void {
+    	$locale = lang;
+    	saveLocale(lang); // Save the locale to localStorage
+  	}
+
 	function goToHomePage() {
 		goto('/');
 	}
@@ -28,12 +36,13 @@
 		<ul class="other-tabs doNotSelect">
 			<li class="tabs"><a href="/">Home</a></li>
 			<li class="tabs"><a href="/about">About</a></li>
-			<li class="tabs"><a href="/services">Services</a></li>
-			<li class="tabs"><a href="/contact">Contact</a></li>
+			<li class="tabs"><a href="/team">Our Team</a></li>
+			<li class="tabs"><a href="/sponsors">Sponsors</a></li>
 			<li class="tabs"><a href="/candidacy">Rejoignez-nous!</a></li>
 		</ul>
 	</nav>
 </header>
+<div class="header-gap"></div>
 
 <style>
 	@font-face {
@@ -179,7 +188,11 @@
 	.tabs {
 		background-color: red;
 	}
-}
 
-	
+}
+	.header-gap {
+        display: block;
+        height: var(--headerHeight);
+    }
+
 </style>

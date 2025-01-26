@@ -2,6 +2,7 @@
 	// import { onMount } from "svelte";
     import Footer from '$lib/components/Footer.svelte';
     import Header from '$lib/components/Header.svelte';
+    import { t } from 'svelte-i18n';
     
     // onMount(() => {
     //     const temp = fetch('http://localhost:5173/api/candidacy/', {
@@ -18,16 +19,11 @@
 
 <div class="main-container">
     <Header />
-    <div class="introduction-image"> 
-        <div class="text-bloc">
-    
-        </div>
-    
-    </div>
+    <div class="introduction-image"></div>
     <div class="presentation-container">
         <div class="initial-presentation">
             <div class="left-presentation">
-                <h2>Présentation</h2>
+                <h2>{$t('presentation')}</h2>
                 <p>Archimède est une société technique de Polytechnique Montréal qui se spécialise dans la conception de sous-marins à propution humaine afin de compétitonner dans des compétitions internatinales.</p>
                 <a href="./about"><button id="about-button">Learn more about the project</button></a>
             </div>
@@ -56,8 +52,6 @@
     <Footer />
 
 </div>
-
-
 
 
 <style>

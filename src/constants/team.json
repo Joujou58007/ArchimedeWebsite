@@ -1,0 +1,78 @@
+{
+    "teams" : [
+        {
+            "name" : "Coque",
+            "members" : [
+                {
+                    "name" : "Luka",
+                    "imagePath" : "/images/members/1.jpg",
+                    "genie" : "Info",
+                    "linkedin" : ""
+                },
+                {
+                    "name" : "Thomas",
+                    "imagePath" : "/images/members/2.jpg",
+                    "genie" : "Info",
+                    "linkedin" : ""
+                }
+            ]
+        },
+        {
+            "name" : "Direction",
+            "members" : [
+                {
+                    "name" : "Julien Leduc",
+                    "imagePath" : "/images/members/3.jpg",
+                    "genie" : "Info",
+                    "linkedin" : ""
+                },
+                {
+                    "name" : "Mathieu Banville",
+                    "imagePath" : "/images/members/4.jpg",
+                    "genie" : "Info",
+                    "linkedin" : "https://ca.linkedin.com/"
+                },
+                {
+                    "name" : "Felix",
+                    "imagePath" : "/images/members/5.jpg",
+                    "genie" : "Info",
+                    "linkedin" : ""
+                },
+                {
+                    "name" : "Louis",
+                    "imagePath" : "/images/members/6.jpg",
+                    "genie" : "Info",
+                    "linkedin" : ""
+                }
+            ]
+        },
+        {
+            "name" : "Propulsion",
+            "members" : [
+                {
+                    "name" : "Personne",
+                    "imagePath" : "/images/members/7.jpg",
+                    "genie" : "Info",
+                    "linkedin" : "https://ca.linkedin.com/"
+                }
+            ]
+        },
+        {
+            "name" : "Transmission",
+            "members" : [
+                {
+                    "name" : "Alexie Lirette",
+                    "imagePath" : "/images/members/8.jpg",
+                    "genie" : "Info",
+                    "linkedin" : "https://ca.linkedin.com/"
+                },
+                {
+                    "name" : "Takeo",
+                    "imagePath" : "/images/members/9.jpg",
+                    "genie" : "Info",
+                    "linkedin" : "https://ca.linkedin.com/"
+                }
+            ]
+        }
+    ]
+}

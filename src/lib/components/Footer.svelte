@@ -1,7 +1,7 @@
 <footer>
     <div class="social-media">
-        <a href="https://www.facebook.com/polyarchimede"><img src="/images/facebook-icon.svg" alt=""></a>
-        <a href="https://www.instagram.com/archimede.poly/"><img src="/images/instagram-icon.svg" alt=""></a>
+        <a href="https://www.facebook.com/polyarchimede"><img src="/icons/facebook-icon.svg" alt=""></a>
+        <a href="https://www.instagram.com/archimede.poly/"><img src="/icons/instagram-icon.svg" alt=""></a>
     </div>
 </footer>
 
